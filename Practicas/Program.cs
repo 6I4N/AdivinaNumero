@@ -6,25 +6,22 @@ namespace Practicas
     {
         static void Main(string[] args)
         {
-            int intentos = 1;
+            int intentos = 0;
+            int respuesta;
             Random num = new Random();
             int numAleatorio = num.Next(0,100);
 
             Console.WriteLine("Adivine el número entre 0 a 100");
-            int respuesta = int.Parse(Console.ReadLine());
-
-            while (respuesta != numAleatorio)
+            do
             {
+                respuesta = int.Parse(Console.ReadLine());
                 intentos++;
-                
-                if(respuesta > numAleatorio) Console.WriteLine("El número es menor");
+                if (respuesta > numAleatorio) Console.WriteLine("El número es menor");
 
                 else Console.WriteLine("El número es mayor");
+            } while (respuesta != numAleatorio);
 
-                respuesta = int.Parse(Console.ReadLine());
-            }
-
-            Console.WriteLine($"Adivinaste el número|Número adivinado:{numAleatorio}|Intentos: {intentos}");
+                Console.WriteLine($"Adivinaste el número|Número adivinado:{numAleatorio}|Intentos: {intentos}");
         }
     }
 }
