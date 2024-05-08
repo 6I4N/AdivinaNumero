@@ -21,7 +21,8 @@ namespace Practicas
                 else Console.WriteLine("El número es mayor");
             } while (respuesta != numAleatorio);
 
-                Console.WriteLine($"Adivinaste el número|Número adivinado:{numAleatorio}|Intentos: {intentos}");
+            Console.WriteLine("¡Adivinaste el número!");
+            Console.WriteLine($"El número adivinado es: {numAleatorio}|El número de intentos fue: {intentos}");
         }
     }
 }
